@@ -4,7 +4,7 @@ const posts = require('../db/db.js')
 const index = (req, res)=>{
 
     //cero una ul
-    let ul = `<ul></ul>`
+    let ul = `<ul>`
     posts.forEach(post=>{
 
         //inserisco gli li nell'ul
@@ -17,8 +17,9 @@ const index = (req, res)=>{
             </li>
         `;
         
-        
     })
+
+    ul += `</ul>`
 
     res.status(200).send(ul)
 }

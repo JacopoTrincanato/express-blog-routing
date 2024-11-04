@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 //importo il contenuto di dolcicontrollers
-const dolciController = require('../controllers/dolcicontrollers.js')
+const dolciController = require('../controllers/dolcicontroller.js')
 
 //definisco le rotte
 
