@@ -25,10 +25,10 @@ const index = (req, res)=>{
 
 const show = (req, res)=>{
 
-    //uso il ciclo find per trovare e visualizzare l'id corrispondente alla pizza
+    //uso il ciclo find per trovare e visualizzare il post in base al suo slug
     const post = posts.find(post => post.slug === req.params.slug)
 
-    //restituisci un messaggio di errore se non trovi il post
+    //restituisci un messaggio di errore se non trova il post
     if (!post) {
         return res.status(404).json({
             error: `404! Not found`
