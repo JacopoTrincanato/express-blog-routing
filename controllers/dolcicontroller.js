@@ -1,8 +1,6 @@
 //importo l'array dal file db.js nella cartella db
 const posts = require('../db/db.js')
 
-const fs = require('fs')
-
 const index = (req, res)=>{
 
     //cero una ul
