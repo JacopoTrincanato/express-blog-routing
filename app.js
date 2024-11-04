@@ -13,3 +13,8 @@ app.listen(PORT, (req, res)=>{
     console.log(`Server is running at ${HOST}:${PORT}`);
     
 })
+
+//creo la prima rotta
+app.get('/', (req, res)=>{
+    res.send('Post rest API')
+})
