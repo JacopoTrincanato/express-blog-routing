@@ -25,4 +25,26 @@ const index = (req, res)=>{
     res.status(200).send(ul)
 }
 
-module.exports = { index }
+const show = (req, res)=>{
+
+    //uso il ciclo find per trovare e visualizzare l'id corrispondente alla pizza
+    const post = posts.find(post => post.slug === req.params.slug)
+
+    //restituisci un messaggio di errore se non trovi il post
+    if (!post) {
+        return res.status(404).json({
+            error: `404! Not found`
+        })
+    }
+    //se lo trova, restituisci uno status 200
+    return res.status(200).json({
+        data: post
+    })
+    
+}
+
+//esporto index e show
+module.exports = { 
+    index,
+    show 
+}
