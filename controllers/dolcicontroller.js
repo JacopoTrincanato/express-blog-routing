@@ -4,7 +4,7 @@ const posts = require('../db/db.js')
 const index = (req, res)=>{
 
     //cero una ul
-    let ul = `<ul>`
+    let ul = `<ul>`;
     posts.forEach(post=>{
 
         //inserisco gli li nell'ul
@@ -12,14 +12,14 @@ const index = (req, res)=>{
             <li>
                 <h2>${post.title}</h2>
                 <p>${post.content}</p>
-                <img src="${post.image}" alt="${post.title}">
+                <img src="/img/${post.image}" alt="${post.title}">
                 <p><strong>Tags:</strong> ${post.tags.join(', ')}</p>
             </li>
         `;
         
     })
 
-    ul += `</ul>`
+    ul += `</ul>`;
 
     res.status(200).send(ul)
 }

@@ -12,7 +12,7 @@ const HOST = process.env.HOST
 const PORT = process.env.PORT
 
 //gestisco i file statici
-app.use(express.static('/public'));
+app.use(express.static('public'));
 
 //starto il server
 app.listen(PORT, (req, res)=>{
